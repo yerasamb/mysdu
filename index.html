@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Information System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo-container">
+            <img src="sdu_logo.png" alt="SDU University">
+        </div>
+
+        <nav>
+
+            <a href="#">
+                <span>⌂</span>
+                Home page
+            </a>
+
+            <div class="section-title">
+                Academic Operations
+            </div>
+
+            <a href="#">
+                <span>📄</span>
+                Consent Requests
+            </a>
+
+            <a href="#">
+                <span>🗓️</span>
+                Course Registration
+            </a>
+
+            <a href="#">
+                <span>☷</span>
+                Wish list
+            </a>
+
+            <a href="#">
+                <span>📜</span>
+                Withdrawals
+            </a>
+
+
+            <div class="section-title">
+                Information
+            </div>
+
+            <a href="#">
+                <span>📚</span>
+                Curricula
+            </a>
+
+            <a href="#">
+                <span>▤</span>
+                My Curriculum
+            </a>
+
+            <a href="#">
+                <span>🔎</span>
+                Transcript
+            </a>
+
+            <a href="#">
+                <span>📒</span>
+                Grades List
+            </a>
+
+            <a href="#" class="selected">
+                <span>▦</span>
+                Course Schedule
+            </a>
+
+            <a href="#">
+                <span>🟠</span>
+                MY Accounting Info
+            </a>
+
+            <a href="#">
+                <span>🧑‍🏫</span>
+                Electronic Attendance
+            </a>
+
+            <a href="#">
+                <span>📅</span>
+                System Calendar
+            </a>
+
+            <a href="#">
+                <span>🚪</span>
+                Gate Entry Records
+            </a>
+
+            <a href="#">
+                <span>📋</span>
+                Rules and Regulations
+            </a>
+
+
+            <div class="section-title">
+                Services
+            </div>
+
+            <a href="#">
+                <span>✉️</span>
+                Messages
+            </a>
+
+            <a href="#">
+                <span>📮</span>
+                Questionnaires
+            </a>
+
+            <a href="#">
+                <span>✉</span>
+                SduMail
+            </a>
+
+            <a href="#">
+                <span>🌐</span>
+                Online Services
+            </a>
+
+
+            <div class="section-title">
+                Profile
+            </div>
+
+            <a href="#">
+                <span>⚙️</span>
+                Settings
+            </a>
+
+            <a href="#">
+                <span>🧑</span>
+                My Profile
+            </a>
+
+            <a href="#">
+                <span>🔒</span>
+                [ Sign out ]
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOP INFORMATION -->
+
+        <header class="topbar">
+
+            <div class="portal">
+
+                <div class="system-title">
+                    Student Information System
+                </div>
+
+                <button class="guideline">
+                    📕&nbsp; Portal Guideline
+                </button>
+
+            </div>
+
+
+            <div class="student-card">
+
+                <div class="student-info">
+
+                    <div>
+                        <b>Name Surname :</b>
+                        <span>Yerassyl Amanbay</span>
+                    </div>
+
+                    <div>
+                        <b>Advisor :</b>
+                        <span>Юсупова Аниза</span>
+                    </div>
+
+                    <div>
+                        <b>Major Program :</b>
+                        <span>Ақпараттық жүйелер-EN / 2025</span>
+                    </div>
+
+                    <div>
+                        <b>Last Login Date :</b>
+                        <span>21-SEP-26</span>
+                    </div>
+
+                    <div>
+                        <b>Last Login IP :</b>
+                        <span>10.48.129.120</span>
+                    </div>
+
+                    <div>
+                        <b>System Date :</b>
+                        <span>21 Sep 2026 10:52 am</span>
+                    </div>
+
+                </div>
+
+                <img
+                    class="profile"
+                    src="profile.jpeg"
+                    alt="Student"
+                >
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= SCHEDULE ================= -->
+
+        <section class="schedule-section">
+
+            <h1>
+                Course Schedule
+            </h1>
+
+
+            <!-- CONTROLS -->
+
+            <div class="controls">
+
+                <div class="control-label">
+                    Schedule type
+                </div>
+
+                <div class="schedule-type">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="schedule"
+                            checked
+                        >
+                        Individual
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="schedule"
+                        >
+                        Speciality
+                    </label>
+
+                </div>
+
+
+                <div class="year-control">
+
+                    <span>
+                        Year and Term
+                    </span>
+
+                    <select id="term">
+
+                        <option>
+                            (2026 - 2027) 1.term
+                        </option>
+
+                        <option>
+                            (2026 - 2027) 2.term
+                        </option>
+
+                    </select>
+
+                    <button id="showButton">
+                        Show
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="print-button"
+                    onclick="window.print()"
+                >
+                    Print
+                </button>
+
+            </div>
+
+
+            <!-- DETAILS -->
+
+            <div class="details">
+
+                Details
+
+                <input
+                    type="checkbox"
+                    id="detailsCheckbox"
+                >
+
+            </div>
+
+
+            <div class="semester">
+                2026-2027 1 term
+            </div>
+
+
+            <!-- ================= TABLE ================= -->
+
+            <table class="schedule">
+
+                <thead>
+
+                <tr>
+
+                    <th class="time-header">
+                        Day/Hour
+                    </th>
+
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+
+                </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                <!-- 08:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>08:30</strong>
+                        <small>09:20</small>
+                    </th>
+
+                    <td>
+                        <div class="course">
+                            MAT 138
+                            <span>[09-L]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: G301
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="course">
+                            MAT 138
+                            <span>[02-N]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: E117
+                        </div>
+                    </td>
+
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            CSS 331
+                            <span>[01-N]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: D113
+                        </div>
+                    </td>
+
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+
+                <!-- 09:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>09:30</strong>
+                        <small>10:20</small>
+                    </th>
+
+                    <td>
+                        <div class="course">
+                            MAT 138
+                            <span>[09-L]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: G301
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="course">
+                            MAT 138
+                            <span>[02-N]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: E117
+                        </div>
+                    </td>
+
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            CSS 331
+                            <span>[01-N]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: D113
+                        </div>
+                    </td>
+
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+
+                <!-- 10:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>10:30</strong>
+                        <small>11:20</small>
+                    </th>
+
+                    <td></td>
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            MDE 154
+                            <span>[19-N]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: VR 48
+                        </div>
+                    </td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+
+                <!-- 11:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>11:30</strong>
+                        <small>12:20</small>
+                    </th>
+
+                    <td></td>
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            MDE 153
+                            <span>[13-N]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: VR 73
+                        </div>
+                    </td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+
+                <!-- 12:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>12:30</strong>
+                        <small>13:20</small>
+                    </th>
+
+                    <td>
+                        <div class="course">
+                            CSS 331
+                            <span>[07-P]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: F205
+                        </div>
+                    </td>
+
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            CSS 215
+                            <span>[01-N]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: G304
+                        </div>
+                    </td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+
+                <!-- 13:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>13:30</strong>
+                        <small>14:20</small>
+                    </th>
+
+                    <td></td>
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            CSS 215
+                            <span>[01-N]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: G304
+                        </div>
+                    </td>
+
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            CSS 217
+                            <span>[16-P]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: G102
+                        </div>
+                    </td>
+
+                    <td></td>
+
+                </tr>
+
+
+                <!-- 14:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>14:30</strong>
+                        <small>15:20</small>
+                    </th>
+
+                    <td></td>
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            CSS 217
+                            <span>[07-N]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: D217
+                        </div>
+                    </td>
+
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            CSS 217
+                            <span>[16-P]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: G102
+                        </div>
+                    </td>
+
+                    <td></td>
+
+                </tr>
+
+
+                <!-- 15:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>15:30</strong>
+                        <small>16:20</small>
+                    </th>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            CSS 215
+                            <span>[07-L]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: F102
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="course">
+                            INF 313
+                            <span>[10-P]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: F107
+                        </div>
+                    </td>
+
+                    <td></td>
+
+                </tr>
+
+
+                <!-- 16:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>16:30</strong>
+                        <small>17:20</small>
+                    </th>
+
+                    <td></td>
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            INF 313
+                            <span>[02-N]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: I 110, I 111
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="course">
+                            CSS 215
+                            <span>[07-L]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: F102
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="course">
+                            INF 313
+                            <span>[10-P]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: F107
+                        </div>
+                    </td>
+
+                    <td></td>
+
+                </tr>
+
+
+                <!-- 17:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>17:30</strong>
+                        <small>18:20</small>
+                    </th>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+
+                <!-- 18:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>18:30</strong>
+                        <small>19:20</small>
+                    </th>
+
+                    <td></td>
+                    <td>
+                        <div class="course">
+                            MDE 293
+                            <span>[10-P]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: SH 1
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+
+                    <td></td>
+
+                </tr>
+
+
+                <!-- 19:30 -->
+
+                <tr>
+
+                    <th class="time">
+                        <strong>19:30</strong>
+                        <small>20:20</small>
+                    </th>
+
+                    <td></td>
+
+                    <td>
+                        <div class="course">
+                            INF 211
+                            <span>[02-P]</span>
+                            🧑🏻‍🏫
+                        </div>
+
+                        <div class="room">
+                            🏠: VR 68
+                        </div>
+                    </td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<div id="toast" class="toast">
+    Schedule updated
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

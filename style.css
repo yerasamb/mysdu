@@ -1,0 +1,891 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #ffffff;
+    color: #111111;
+}
+
+body {
+    min-width: 1200px;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 300px;
+    flex: 0 0 300px;
+
+    padding: 0 12px 25px 35px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   SDU LOGO
+========================================================= */
+
+.logo-container {
+    height: 190px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 5px;
+}
+
+.logo-container img {
+    width: 160px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+========================================================= */
+
+nav {
+    width: 100%;
+}
+
+
+/* Navigation item */
+
+nav a {
+    width: 100%;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    margin: 3px 0;
+
+    padding: 0 8px;
+
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+
+    background: #ffffff;
+
+    color: #075cc5;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    line-height: 1;
+}
+
+
+/* Hover */
+
+nav a:hover {
+    background: #f2f8ff;
+}
+
+
+/* Selected */
+
+nav a.selected {
+    background: #d7eaff;
+}
+
+
+/* Icons */
+
+nav a span {
+    width: 28px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 5px;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   SIDEBAR SECTION TITLES
+========================================================= */
+
+.section-title {
+    color: #999999;
+
+    font-size: 18px;
+
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 8px 25px 50px 0;
+}
+
+
+/* =========================================================
+   TOP AREA
+========================================================= */
+
+.topbar {
+    height: 205px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   PORTAL TITLE
+========================================================= */
+
+.portal {
+    padding-top: 35px;
+
+    margin-left: 0;
+}
+
+.system-title {
+    color: #00a8e6;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Portal button */
+
+.guideline {
+    border: none;
+
+    border-radius: 4px;
+
+    background: #08a8df;
+
+    color: #ffffff;
+
+    padding: 7px 12px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+.guideline:hover {
+    background: #078fc0;
+}
+
+
+/* =========================================================
+   STUDENT INFORMATION
+========================================================= */
+
+.student-card {
+    width: 690px;
+
+    min-height: 160px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: flex-start;
+}
+
+
+/* Information table */
+
+.student-info {
+    width: 515px;
+
+    margin-top: 2px;
+
+    text-align: center;
+}
+
+
+.student-info div {
+    min-height: 24px;
+
+    line-height: 24px;
+
+    border-bottom: 1px solid #f2f2f2;
+
+    white-space: nowrap;
+
+    font-size: 14px;
+}
+
+
+/* Left labels */
+
+.student-info b {
+    display: inline-block;
+
+    width: 160px;
+
+    margin-right: 10px;
+
+    text-align: right;
+
+    font-weight: normal;
+}
+
+
+/* Values */
+
+.student-info span {
+    display: inline-block;
+
+    width: 320px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   PROFILE PHOTO
+========================================================= */
+
+.profile {
+    width: 105px;
+    height: 145px;
+
+    margin-left: 12px;
+
+    border-radius: 5px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   SCHEDULE SECTION
+========================================================= */
+
+.schedule-section {
+    width: 100%;
+
+    max-width: 1450px;
+}
+
+
+/* =========================================================
+   COURSE SCHEDULE TITLE
+========================================================= */
+
+h1 {
+    margin: 3px 0 20px;
+
+    color: #cc3f00;
+
+    font-size: 36px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.controls {
+    width: 100%;
+
+    min-height: 58px;
+
+    display: grid;
+
+    grid-template-columns:
+        230px
+        310px
+        1fr
+        80px;
+
+    border: 1px solid #d7d7d7;
+}
+
+
+/* Schedule type title */
+
+.control-label {
+    padding: 15px 8px;
+
+    border-right: 1px solid #d7d7d7;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   RADIO BUTTONS
+========================================================= */
+
+.schedule-type {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-left: 8px;
+
+    border-right: 1px solid #d7d7d7;
+
+    font-size: 15px;
+}
+
+
+.schedule-type label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.schedule-type input {
+    width: 17px;
+    height: 17px;
+
+    accent-color: #1687ff;
+}
+
+
+/* =========================================================
+   YEAR AND TERM
+========================================================= */
+
+.year-control {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding-left: 9px;
+
+    font-size: 15px;
+}
+
+
+.year-control span {
+    white-space: nowrap;
+}
+
+
+.year-control select {
+    width: 195px;
+
+    height: 32px;
+
+    padding: 2px 5px;
+
+    font-size: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #777777;
+
+    border-radius: 2px;
+}
+
+
+/* Show button */
+
+.year-control button {
+    height: 32px;
+
+    padding: 0 12px;
+
+    border: 1px solid #777777;
+
+    border-radius: 2px;
+
+    background: #f5f5f5;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.year-control button:hover {
+    background: #e8e8e8;
+}
+
+
+/* =========================================================
+   PRINT BUTTON
+========================================================= */
+
+.print-button {
+    align-self: center;
+
+    justify-self: end;
+
+    width: 65px;
+
+    height: 32px;
+
+    margin-right: 7px;
+
+    border: 1px solid #777777;
+
+    border-radius: 2px;
+
+    background: #f5f5f5;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background: #e8e8e8;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.details {
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 5px;
+
+    padding-right: 2px;
+
+    font-size: 14px;
+}
+
+
+.details input {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* =========================================================
+   SEMESTER
+========================================================= */
+
+.semester {
+    margin: 2px 0 6px;
+
+    color: #d94b0a;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   SCHEDULE TABLE
+========================================================= */
+
+.schedule {
+    width: 75%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+
+/* =========================================================
+   TABLE BORDERS
+========================================================= */
+
+.schedule th,
+.schedule td {
+    border: 1px solid #f0b51c;
+    align-items: center;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.schedule thead th {
+    height: 55px;
+
+    background: #d9f0ff;
+
+    text-align: center;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    align-items: center;
+}
+
+
+.schedule .time-header {
+    width: 90px;
+
+    padding-left: 7px;
+
+    text-align: center;
+
+
+}
+
+
+/* =========================================================
+   TABLE CELLS
+========================================================= */
+
+.schedule tbody td {
+    height: 84px;
+
+    padding: 15px 8px 5px;
+
+    vertical-align: top;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TIME COLUMN
+========================================================= */
+
+.schedule .time {
+    width: 90px;
+
+    padding: 14px 5px 0;
+
+    vertical-align: top;
+
+    text-align: center;
+
+    background: #d9f0ff;
+}
+
+
+.time strong {
+    display: block;
+
+    font-size: 17px;
+
+    line-height: 20px;
+}
+
+
+.time small {
+    display: block;
+
+    color: #888888;
+
+    font-size: 15px;
+
+    line-height: 19px;
+}
+
+
+/* =========================================================
+   COURSE NAME
+========================================================= */
+
+.course {
+    color: #001cff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    line-height: 20px;
+
+    white-space: nowrap;
+}
+
+
+/* Group */
+
+.course span {
+    color: #111111;
+
+    font-weight: normal;
+
+    margin-left: 2px;
+}
+
+
+/* =========================================================
+   ROOM
+========================================================= */
+
+.room {
+    margin-top: 1px;
+
+    color: #111111;
+
+    font-size: 13px;
+
+    line-height: 18px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TOAST MESSAGE
+========================================================= */
+
+.toast {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    padding: 10px 15px;
+
+    background: #333333;
+
+    color: #ffffff;
+
+    border-radius: 5px;
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+    pointer-events: none;
+
+    transition: 0.25s;
+
+    font-size: 14px;
+}
+
+
+.toast.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1400px) {
+
+    body {
+        min-width: 1000px;
+    }
+
+
+    .sidebar {
+        width: 260px;
+
+        flex-basis: 260px;
+
+        padding-left: 20px;
+    }
+
+
+    .logo-container {
+        height: 170px;
+    }
+
+
+    .logo-container img {
+        width: 140px;
+    }
+
+
+    nav a {
+        height: 39px;
+
+        font-size: 14px;
+    }
+
+
+    .section-title {
+        font-size: 17px;
+
+        margin-top: 17px;
+    }
+
+
+    .main {
+        padding-right: 15px;
+    }
+
+
+    .topbar {
+        height: 190px;
+    }
+
+
+    .student-card {
+        width: 570px;
+    }
+
+
+    .student-info {
+        width: 430px;
+    }
+
+
+    .student-info b {
+        width: 140px;
+    }
+
+
+    .student-info span {
+        width: 270px;
+    }
+
+
+    .profile {
+        width: 95px;
+        height: 125px;
+    }
+
+
+    h1 {
+        font-size: 32px;
+
+        margin-bottom: 17px;
+    }
+
+
+    .controls {
+        grid-template-columns:
+            210px
+            280px
+            1fr
+            75px;
+    }
+
+
+    .schedule thead th {
+        font-size: 17px;
+    }
+
+
+    .schedule tbody td {
+        height: 75px;
+    }
+
+
+    .course {
+        font-size: 13px;
+    }
+
+
+    .room {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+    .sidebar,
+    .portal,
+    .controls,
+    .details {
+        display: none !important;
+    }
+
+
+    body {
+        min-width: 0;
+    }
+
+
+    .main {
+        width: 100%;
+
+        padding: 0;
+    }
+
+
+    .topbar {
+        height: auto;
+    }
+
+
+    .student-card {
+        width: 100%;
+    }
+
+
+    h1 {
+        margin-top: 10px;
+    }
+
+
+    .schedule {
+        width: 100%;
+    }
+
+}
