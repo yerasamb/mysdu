@@ -539,7 +539,7 @@ h1 {
 ========================================================= */
 
 .schedule {
-    width: 75%;
+    width: 100%;
 
     border-collapse: collapse;
 
@@ -730,115 +730,355 @@ h1 {
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 1400px) {
+/* =========================================================
+   MOBILE VERSION
+========================================================= */
+
+@media (max-width: 750px) {
 
     body {
-        min-width: 1000px;
+        overflow-x: hidden;
     }
 
+    .page {
+        display: block;
+        width: 100%;
+    }
+
+
+    /* ---------------- SIDEBAR ---------------- */
 
     .sidebar {
-        width: 260px;
+        width: 100%;
+        padding: 8px 10px;
 
-        flex-basis: 260px;
-
-        padding-left: 20px;
+        border-right: none;
+        border-bottom: 1px solid #eeeeee;
     }
-
 
     .logo-container {
-        height: 170px;
+        height: 70px;
+
+        justify-content: center;
     }
 
-
-    .logo-container img {
-        width: 140px;
+    .logo {
+        width: 130px;
     }
 
+    .navigation {
+        display: flex;
 
-    nav a {
-        height: 39px;
+        flex-direction: row;
 
-        font-size: 14px;
+        overflow-x: auto;
+
+        gap: 5px;
+
+        padding-bottom: 5px;
     }
 
+    .nav-item {
+        flex: 0 0 auto;
 
-    .section-title {
-        font-size: 17px;
+        height: 38px;
 
-        margin-top: 17px;
+        padding: 0 10px;
+
+        font-size: 11px;
+
+        white-space: nowrap;
     }
 
+    .nav-icon {
+        width: 20px;
 
-    .main {
-        padding-right: 15px;
-    }
-
-
-    .topbar {
-        height: 190px;
-    }
-
-
-    .student-card {
-        width: 570px;
-    }
-
-
-    .student-info {
-        width: 430px;
-    }
-
-
-    .student-info b {
-        width: 140px;
-    }
-
-
-    .student-info span {
-        width: 270px;
-    }
-
-
-    .profile {
-        width: 95px;
-        height: 125px;
-    }
-
-
-    h1 {
-        font-size: 32px;
-
-        margin-bottom: 17px;
-    }
-
-
-    .controls {
-        grid-template-columns:
-            210px
-            280px
-            1fr
-            75px;
-    }
-
-
-    .schedule thead th {
-        font-size: 17px;
-    }
-
-
-    .schedule tbody td {
-        height: 75px;
-    }
-
-
-    .course {
         font-size: 13px;
     }
 
 
-    .room {
+    /* ---------------- MAIN ---------------- */
+
+    .main {
+        width: 100%;
+
+        padding: 0;
+    }
+
+
+    /* ---------------- TOP BAR ---------------- */
+
+    .topbar {
+        height: auto;
+
+        padding: 12px;
+
+        display: block;
+    }
+
+    .title-area {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+        margin-bottom: 15px;
+    }
+
+    .title-area h2 {
+        font-size: 18px;
+    }
+
+    .guideline-btn {
+        font-size: 11px;
+
+        padding: 6px 10px;
+    }
+
+
+    /* ---------------- STUDENT INFO ---------------- */
+
+    .student-card {
+        width: 100%;
+
+        display: flex;
+
+        align-items: flex-start;
+    }
+
+    .student-info {
+        font-size: 10px;
+
+        gap: 4px;
+
+        min-width: 0;
+    }
+
+    .info-row {
+        display: flex;
+
+        flex-wrap: wrap;
+    }
+
+    .info-row .label {
+        width: 105px;
+    }
+
+    .profile-container {
+        margin-left: auto;
+    }
+
+    .profile {
+        width: 65px;
+        height: 85px;
+    }
+
+
+    /* ---------------- SCHEDULE ---------------- */
+
+    .schedule-section {
+        width: 100%;
+
+        padding: 12px 8px;
+    }
+
+    .schedule-section h1 {
+        font-size: 20px;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* ---------------- CONTROLS ---------------- */
+
+    .controls {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        font-size: 11px;
+    }
+
+    .schedule-type {
+        width: 100%;
+
+        gap: 10px;
+    }
+
+    .select-group select {
+        height: 27px;
+
+        font-size: 11px;
+    }
+
+    .show-btn,
+    .print-btn {
+        height: 27px;
+
+        font-size: 11px;
+
+        padding: 0 10px;
+    }
+
+    .details-control {
+        font-size: 11px;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* ---------------- SEMESTER ---------------- */
+
+    .semester-title {
         font-size: 12px;
+
+        margin-bottom: 5px;
+    }
+
+
+    /* ---------------- TABLE ---------------- */
+
+    .table-container {
+        width: 100%;
+
+        overflow-x: hidden;
+    }
+
+    .schedule {
+        width: 100%;
+
+        table-layout: fixed;
+
+        border-collapse: collapse;
+    }
+
+
+    /* HEADER */
+
+    .schedule thead th {
+        height: 38px;
+
+        font-size: 11px;
+
+        padding: 3px;
+
+        overflow: hidden;
+    }
+
+    .schedule .time-header {
+        width: 60px;
+
+        font-size: 10px;
+
+        padding: 2px;
+    }
+
+
+    /* TIME COLUMN */
+
+    .schedule .time {
+        width: 60px;
+
+        height: 60px;
+
+        padding: 5px 2px;
+
+        overflow: hidden;
+    }
+
+    .time strong {
+        font-size: 11px;
+
+        line-height: 14px;
+    }
+
+    .time small {
+        font-size: 9px;
+
+        line-height: 12px;
+    }
+
+
+    /* COURSE CELLS */
+
+    .schedule tbody td {
+        height: 60px;
+
+        padding: 5px 2px;
+
+        vertical-align: top;
+
+        overflow: hidden;
+    }
+
+
+    /* COURSE */
+
+    .course {
+        font-size: 8px;
+
+        line-height: 10px;
+
+        font-weight: bold;
+
+        white-space: normal;
+
+        overflow-wrap: anywhere;
+
+        word-break: normal;
+
+        text-align: left;
+    }
+
+
+    .course span {
+        font-size: 8px;
+
+        font-weight: normal;
+
+        white-space: normal;
+    }
+
+
+    /* ROOM */
+
+    .room {
+        margin-top: 2px;
+
+        font-size: 7px;
+
+        line-height: 9px;
+
+        white-space: normal;
+
+        overflow-wrap: anywhere;
+
+        text-align: center;
+    }
+
+
+    /* Hide the teacher emoji on small screens */
+
+    .teacher-icon {
+        display: none;
+    }
+
+
+    /* ---------------- TOAST ---------------- */
+
+    .toast {
+        right: 15px;
+
+        bottom: 15px;
+
+        font-size: 11px;
+
+        padding: 9px 12px;
     }
 }
 
